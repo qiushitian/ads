@@ -46,7 +46,7 @@ function parseInput() {
   }
 
   // Build the target URL
-  const baseUrl = "https://ui.adsabs.harvard.edu/search/filter_database_fq_database=AND&filter_database_fq_database=database%3A%22astronomy%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3A%22astronomy%22)&p_=0";
+  const baseUrl = "https://ui.adsabs.harvard.edu/search/filter_database_fq_database=AND&filter_database_fq_database=database%3A%22astronomy%22&filter_property_fq_property=AND&filter_property_fq_property=property%3A%22refereed%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_property%7D&fq_database=(database%3A%22astronomy%22)&fq_property=(property%3A%22refereed%22)&p_=0";
   let query = `&q=first_author%3A%22${encodeURIComponent(text)}%22`;
   if (digits) {
     query += `%20year%3A${encodeURIComponent(digits)}`;
